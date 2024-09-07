@@ -1,0 +1,72 @@
+.badgeContainer {
+    perspective: 1000px;
+    width: 400px;
+    height: 400px;
+}
+
+.badge {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    /* animation: spinY 5s linear infinite; */
+}
+
+.badge:active {
+    animation-play-state: paused; /* Pause the animation on hover */
+  }
+
+
+.badgeImageContainer, .abbreviation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(81, 64, 157, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(103, 102, 109);
+    font-size: 100px;
+    font-weight: bold;
+    border-radius: 50%;
+    backface-visibility: hidden;
+}
+
+.badgeImageContainer {
+    transform: rotateY(0deg);
+}
+
+.abbreviation {
+    transform: rotateY(180deg);
+}
+
+
+.badgeImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+@keyframes spinY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .badgeContainer {
+        width: 200px;
+        height: 200px;
+    }
+    
+}

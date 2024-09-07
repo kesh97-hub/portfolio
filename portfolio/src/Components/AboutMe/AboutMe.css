@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+}
+
+.aboutMeContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.introContainer {
+    display: block;
+    /* flex-direction: column; */
+    justify-content: start;
+    align-items: center;
+    color: white;
+    font-size: larger;
+    font-family: "League Spartan", sans-serif;
+}
+
+.profileBadgeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.smLinkContainer {
+    /* background-color: rgb(98, 94, 94); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .aboutMeContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content:center;
+        gap: 20px;
+    }
+
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: smaller
+        /* text-align: justify; */
+        /* text-align-last: center; */
+    }
+    
+}

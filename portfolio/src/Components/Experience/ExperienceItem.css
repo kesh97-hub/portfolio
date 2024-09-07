@@ -1,0 +1,104 @@
+.experienceItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    overflow: hidden;
+    color: white;
+    font-family: "League Spartan", sans-serif;
+}
+
+.experienceItemHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experienceItemHeaderImage, .experienceItemCompanyName {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.experienceItemLocation {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.experienceItemSubHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.experienceItemPosition {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.experienceItemDate, .experienceItemTeam{
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.experienceItemDescriptionListItem {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+@media (max-width: 900px) {
+    .experienceItem {
+        overflow: auto;
+        scrollbar-width: none;
+    }
+
+    .experienceItemHeaderImage, .experienceItemCompanyName {
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .experienceItemLocation {
+        font-size: 16px;
+    }
+
+    .experienceItemPosition {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .experienceItemSubHeader {
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: left;
+    }
+
+    .experienceItemDate, .experienceItemTeam, .experienceItemLocation{
+        font-size: 16px;
+    }
+    
+    .experienceItemDescriptionListItem {
+        font-size: 16px;
+    }
+}

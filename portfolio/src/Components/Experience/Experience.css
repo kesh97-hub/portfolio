@@ -1,0 +1,75 @@
+.experienceContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 100vh;
+    gap: 20px;
+    font-family: "League Spartan", sans-serif;
+}
+
+.experienceHeader {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    /* align-items: stretch; */
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.experienceHeaderText {
+    color: gray;
+    transform: rotate(-90deg);
+    text-align: center;
+    transform-origin: center;
+    font-size: 128px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.experienceHeaderText:hover {
+    transform: rotate(-45deg);
+    transition: ease-in-out;
+}
+
+.experienceBody {
+    display: block;
+    overflow: hidden;
+    margin-right: 100px;
+}
+
+
+@media (max-width: 900px) {
+    .experienceContainer {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: auto;
+        gap: 0px;
+    }
+
+    .experienceHeader {
+        flex-direction: row;
+        margin-left: 0px;
+        gap: 0px;
+    }
+
+    .experienceHeaderText {
+        transform: none;
+        text-align: center;
+        font-size: 100px;
+        font-weight: 800;
+    }
+
+    .experienceHeaderText:hover {
+        transform: none
+    }
+
+    .experienceBody {
+        display: block;
+        overflow: hidden;
+        margin-right: 10px;
+    }
+}

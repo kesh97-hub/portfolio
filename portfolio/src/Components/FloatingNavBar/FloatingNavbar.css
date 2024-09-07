@@ -1,0 +1,38 @@
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0,3);
+    z-index: 1000;
+}
+
+.navbarContent {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navItem {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navItem:hover {
+    color: #f0f0f0;
+}
+
+
+@media (max-width: 900px) {
+    .navbar {
+        display: none;
+    }
+    .navbarContent {
+        gap: 10px;
+    }
+    
+}
