@@ -65,7 +65,7 @@ function AboutMe() {
                     delay: 0.2,
                 }}
             >
-                <Badge imageSrc={"/BadgePic.jpg"} nameAbbreviation={"KK"}/>
+                <Badge imageSrc={"/portfolio/BadgePic.jpg"} nameAbbreviation={"KK"}/>
                 <div className="smLinkContainer">
                     <a
                         className="personalLinks"

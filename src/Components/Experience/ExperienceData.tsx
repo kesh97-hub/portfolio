@@ -2,7 +2,6 @@ import { SiOracle } from 'react-icons/si'
 
 export type Experience = {
     id: number;
-    imageSrc?: string;
     companyLogo?: JSX.Element;
     companyName: string;
     location?: string;
@@ -26,7 +25,6 @@ export type Award = {
 export const experiences: Experience[] = [
     {
         id: 1,
-        imageSrc: "",
         companyLogo: <SiOracle color="#F80000" className="companyLogo"/>,
         companyName: "Oracle",
         location: "Bengaluru, India",
@@ -50,7 +48,6 @@ export const experiences: Experience[] = [
     },
     {
         id: 2,
-        imageSrc: "",
         companyLogo: <SiOracle color="#F80000" className="companyLogo"/>,
         companyName: "Oracle",
         position: "Application Developer",

@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
             {
                 name: "Sumana Madhireddy",
                 linkedInUrl: "https://www.linkedin.com/in/sumana-madhireddy-b8aa49186/",
-                avatar: "/Sumana_Avatar_Pic.jpeg",
+                avatar: "/portfolio/Sumana_Avatar_Pic.jpeg",
             },
         ],
     },
@@ -68,12 +68,12 @@ export const projectsData: Project[] = [
             {
                 name: "Gokul Ram Subramani",
                 linkedInUrl: "https://www.linkedin.com/in/gokul-ram-s/",
-                avatar: "/Gokul_Avatar_Pic.jpeg",
+                avatar: "/portfolio/Gokul_Avatar_Pic.jpeg",
             },
             {
                 name: "Tharun Gangaraju",
                 linkedInUrl: "https://www.linkedin.com/in/tharun-gangaraju-b81b521b0/",
-                avatar: "/Tharun_Avatar_Pic.jpeg",
+                avatar: "/portfolio/Tharun_Avatar_Pic.jpeg",
             }
         ],
     },
@@ -96,12 +96,12 @@ export const projectsData: Project[] = [
             {
                 name: "Sneha Talapala",
                 linkedInUrl: "https://www.linkedin.com/in/sneha-talapala/",
-                avatar: "/Sneha_Avatar_Pic.jpeg",
+                avatar: "/portfolio/Sneha_Avatar_Pic.jpeg",
             },
             {
                 name: "Dhanush Babu Ramadoss",
                 linkedInUrl: "https://www.linkedin.com/in/dhanush-babu-a23426130/",
-                avatar: "/Dhanush_Avatar_Pic.jpeg",
+                avatar: "/portfolio/Dhanush_Avatar_Pic.jpeg",
             }
         ],
     },
@@ -125,12 +125,12 @@ export const projectsData: Project[] = [
             {
                 name: "Dhanush Babu Ramadoss",
                 linkedInUrl: "https://www.linkedin.com/in/dhanush-babu-a23426130/",
-                avatar: "/Dhanush_Avatar_Pic.jpeg",
+                avatar: "/portfolio/Dhanush_Avatar_Pic.jpeg",
             },
             {
                 name: "Kishore Nithin Sridar",
                 linkedInUrl: "https://www.linkedin.com/in/kishore-nithin-sridhar/",
-                avatar: "/Kishore_Avatar_Pic.jpeg",
+                avatar: "/portfolio/Kishore_Avatar_Pic.jpeg",
             }
         ],
     },
