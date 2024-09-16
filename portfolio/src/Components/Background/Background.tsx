@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import "./Background.css"
 
+const NUM_TRIANGLES = 15;
+const TRIANGLE_SIZE = 10;
+
 function Background() {
     useEffect(() => {
-        generateTriangles(15);
+        generateTriangles(NUM_TRIANGLES);
     }, [])
 
     function generateTriangles(count: number) {
@@ -13,7 +16,7 @@ function Background() {
                 const triangle = document.createElement('div');
                 triangle.className = 'triangle';
 
-                const size = 10;
+                const size = TRIANGLE_SIZE;
                 triangle.style.borderLeftWidth = `${size / 2}px`;
                 triangle.style.borderRightWidth = `${size / 2}px`;
                 triangle.style.borderBottomWidth = `${size}px`;

@@ -4,22 +4,26 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    padding: 10px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0,3);
+    border-radius: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0,3);
     z-index: 1000;
 }
 
 .navbarContent {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .navItem {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
 .navItem:hover {

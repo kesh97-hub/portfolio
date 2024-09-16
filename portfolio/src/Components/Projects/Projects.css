@@ -2,77 +2,78 @@ body {
     font-size: 16px;
 }
 
-.experienceContainer {
+.projectsContainer {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
+    /* padding: 0 5%; */
     height: auto;
     margin: 10rem 10rem;
     gap: 5rem;
     font-family: "League Spartan", sans-serif;
 }
 
-.experienceHeader {
+.projectsHeader {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
-.experienceHeaderText {
+.projectsHeaderText {
     color: gray;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     text-align: center;
     transform-origin: center;
     font-size: 4rem;
     font-weight: 800;
     margin: 0;
+    transition: transform 0.1s ease-in-out;
 }
 
-.experienceHeaderText:hover {
-    transform: rotate(-45deg);
-    transition: transform 0.2s ease-in-out;
+.projectsHeaderText:hover {
+    transform: rotate(45deg);
 }
 
-.experienceBody {
+.projectsBody {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    /* margin-right: 10rem; */
-    gap: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 
 @media (max-width: 900px) {
-    .experienceContainer {
+    .projectsContainer {
         flex-direction: column;
         margin: 10rem 2rem;
         height: auto;
         gap: 2rem;
     }
 
-    .experienceHeader {
+    .projectsHeader {
         flex-direction: row;
+        gap: 0.8rem;
     }
 
-    .experienceHeaderText {
+    .projectsHeaderText {
         transform: none;
         text-align: center;
         font-size: 2rem;
-        font-weight: 800;
     }
 
-    .experienceHeaderText:hover {
-        transform: none
+    .projectsHeaderText:hover {
+        transform: none;
     }
 
-    .experienceBody {
-        display: block;
-        overflow: hidden;
-        /* margin: 0 1rem 2rem 1rem; */
+    .projectsBody {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
     }
+
 }

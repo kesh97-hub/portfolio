@@ -2,7 +2,7 @@ body {
     font-size: 16px;
 }
 
-.experienceContainer {
+.certificationsContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
     font-family: "League Spartan", sans-serif;
 }
 
-.experienceHeader {
+.certificationsHeader {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -21,58 +21,59 @@ body {
     gap: 1rem;
 }
 
-.experienceHeaderText {
+.certificationsHeaderText {
     color: gray;
     transform: rotate(-90deg);
     text-align: center;
     transform-origin: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
     margin: 0;
 }
 
-.experienceHeaderText:hover {
+.certificationsHeaderText:hover {
     transform: rotate(-45deg);
     transition: transform 0.2s ease-in-out;
 }
 
-.experienceBody {
+.certificationsBody {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     overflow: hidden;
+    justify-content: center;
+    flex-wrap: wrap;
     /* margin-right: 10rem; */
     gap: 4rem;
 }
 
-
 @media (max-width: 900px) {
-    .experienceContainer {
+    .certificationsContainer {
         flex-direction: column;
         margin: 10rem 2rem;
         height: auto;
         gap: 2rem;
     }
 
-    .experienceHeader {
+    .certificationsHeader {
         flex-direction: row;
+        gap: 0.8rem;
     }
 
-    .experienceHeaderText {
+    .certificationsHeaderText {
         transform: none;
         text-align: center;
         font-size: 2rem;
         font-weight: 800;
     }
 
-    .experienceHeaderText:hover {
+    .certificationsHeaderText:hover {
         transform: none
     }
 
-    .experienceBody {
-        display: block;
-        overflow: hidden;
+    .certificationsBody {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
         /* margin: 0 1rem 2rem 1rem; */
     }
 }

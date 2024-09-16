@@ -1,0 +1,72 @@
+.certificationsItemContainer {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 15rem;
+}
+
+.certificationsItemHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0.8rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.certificationsItemBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    gap: 1rem;
+    margin: 0;
+    text-align-last: center;
+    text-align: center;
+}
+
+.certificationLink {
+    text-decoration: none;
+    opacity: 0.8;
+    transition: transform 0.3 ease-in-out;
+}
+
+.certificationLink:hover {
+    text-decoration: none;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.certificationIcon {
+    font-size: 4rem;
+    color: #FFD700;
+}
+
+.certificationName {
+    margin: 0;
+}
+
+.certificationDateContainer {
+    margin: 0;
+}
+
+.certificationDate {
+    font-weight: 100;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .certificationsItemHeader {
+        font-size: large;
+    }
+
+    .certificationLink {
+        text-decoration: none;
+        opacity: 1;
+        transition: none;
+    }
+    
+    .certificationLink:hover {
+        transform: none
+    }
+}

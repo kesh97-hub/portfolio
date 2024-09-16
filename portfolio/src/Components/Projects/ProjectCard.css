@@ -1,0 +1,272 @@
+body {
+    font-size: 16px;
+    
+}
+
+.projectCard {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* overflow: hidden; */
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+}
+
+.projectCardFrontContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.projectCardFront {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: "League Spartan", sans-serif;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+}
+
+.projectCardFrontHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 2rem; */
+    margin: 0.5rem 0.8rem;
+}
+
+.projectDate {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.projectCardFlipButton {
+    /* color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+}
+
+.projectCardFlipButtonIcon {
+    font-size: 1.5rem;
+    color: #DDDDDD;
+}
+
+.projectCardFlipButtonIcon:hover {
+    transform: scale(1.2);
+    color: #FFFFFF;
+}
+
+.projectCardFrontBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    text-align-last: center;
+    text-align: center;
+}
+
+.projectName {
+    font-size: x-large;
+    font-weight: 600;
+    width: 80%;
+    margin: 1rem 0;
+}
+
+.projectShortDesc {
+    margin: 0;
+    line-height: 1.3rem;
+    font-weight: 400;
+    color: #DDDDDD;
+}
+
+.projectTechStack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    font-weight: 200;
+}
+
+.projectTech {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #AAAAAA;
+}
+
+.projectCardFrontFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem 0.8rem;
+}
+
+.projectLink {
+    margin: 0.5rem 1rem;
+    text-decoration: none !important;
+    transition: transform 0.1 ease-in-out;
+}
+
+.projectLink:hover {
+    transform: scale(1.2);
+}
+
+.projectCollaboratorLink {
+    text-decoration: none !important;
+    transition: transform 0.1s ease-in-out;
+    opacity: 0.9;
+}
+
+.projectCollaboratorLink:hover {
+    transform: scale(1.2);
+    z-index: 2;
+    opacity: 1;
+}
+
+.projectCardBackContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+.projectCardBack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    width: 100%;
+    height: 100%;
+    font-family: "League Spartan", sans-serif;
+}
+
+.projectCardBackHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 2rem; */
+    margin: 0.5rem 0.8rem;
+}
+
+.projectCardBackHeaderTitle {
+    flex-grow: 1;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 4rem;
+}
+
+.projectCardBackBody {
+    /* display: flex; */
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 0 1rem;
+    /* text-align-last: center;
+    text-align: center; */
+}
+
+.projectCardDescriptionListItem {
+    margin: 0 0 0.9375rem;
+    line-height: 1.3rem;
+}
+
+@media (max-width: 900px) {
+    .projectCard {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .projectCardFrontHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        margin: 0.2rem 0.5rem;
+    }
+
+    .projectCardFlipButtonIcon {
+        color: #FFFFFF;
+        /* font-size: 1rem; */
+    }
+
+    .projectCardFlipButtonIcon:hover {
+        transform: none
+    }
+
+    .projectName {
+        font-size: larger;
+        margin: 1rem 0;
+    }
+
+    .projectShortDesc {
+        line-height: 1rem;
+    }
+
+    .projectTechStack {
+        display: flex;
+        gap: 0.2rem;
+        flex-wrap: nowrap;
+        font-weight: 300;
+    }
+    
+    .projectTech {
+        display: flex;
+        gap: 0.2rem;
+        color: #AAAAAA;
+        font-size: 0.8rem;
+    }
+    
+    .projectLink {
+        margin: 0.5rem 1rem;
+        transition: none;
+    }
+    
+    .projectLink:hover {
+        transform: none
+    }
+    
+    .projectCollaboratorLink {
+        transition: none;
+        opacity: 1;
+    }
+    
+    .projectCollaboratorLink:hover {
+        transform: none;
+        z-index: 0;
+        opacity: 1;
+    }
+    
+    
+    .projectCardBackHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 2rem; */
+        margin: 0.2rem 0.5rem 0rem;
+        padding: 0;
+    }
+    
+    .projectCardBackBody {
+        padding: 0 0.5rem;
+        margin: 0;
+    }
+    
+    .projectCardDescriptionListItem {
+        margin: 0 0 0.5rem;
+        line-height: 1rem;
+    }
+}
