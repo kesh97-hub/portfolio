@@ -70,7 +70,7 @@ body {
     }
 
     .certificationsBody {
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
         align-items: center;
         gap: 1.5rem;

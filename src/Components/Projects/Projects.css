@@ -39,6 +39,7 @@ body {
 
 .projectsBody {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -70,7 +71,7 @@ body {
     }
 
     .projectsBody {
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
         align-items: center;
         gap: 1.5rem;

@@ -49,7 +49,7 @@ function ExperienceItem(props: experienceProps) {
                     <p className="experienceItemLocation">{props.experience.location}</p>
                 </div>
                 <div className="experienceItemSubHeader">
-                    <h3 className="experienceItemPosition">{props.experience.position}</h3>
+                    <h3 className="experienceItemPosition">{props.experience.position}{props.experience.team ? " - " + props.experience.team : ""}</h3>
 
                     <p className="experienceItemDate">{props.experience.startDateMonth} {props.experience.startDateYear} - {props.experience.endDateMonth ? props.experience.endDateMonth : "Present"} {props.experience.endDateYear ? props.experience.endDateYear : ""}</p>
                 </div>

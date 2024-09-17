@@ -15,7 +15,6 @@ function Experiences() {
 
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [2, 1])
     const opacityProgress = useTransform(scrollYProgress, [0.2, 1], [0, 1])
-
     return (
         <div className="experienceContainer">
             <motion.div 
@@ -38,7 +37,7 @@ function Experiences() {
                 <h1 className="experienceHeaderText">E</h1>
             </motion.div>
             <motion.div className="experienceBody">
-                {experiences.map((exp, index) => (
+                {[...experiences].reverse().map((exp, index) => (
                     <ExperienceItem key={index} experience={exp}></ExperienceItem>
                 ))}
             </motion.div>

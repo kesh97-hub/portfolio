@@ -31,7 +31,7 @@ body {
 
 .experienceItemCompanyName {
     margin: 0 0 0 0.3125rem;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #FFFFFF;
 }
@@ -48,16 +48,17 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 0 0.9375rem;
+    font-size: 1.125rem;
 }
 
 .experienceItemPosition {
-    margin: 0 0 0.3125rem;
+    margin: 0.3125rem 0;
     font-size: 1.5rem;
     font-weight: 400;
 }
 
 .experienceItemDate, .experienceItemTeam{
-    margin: 0 0 0.3125rem;
+    /* margin: 0 0 0.3125rem; */
     font-size: 1.125rem;
     font-weight: 100;
     font-style: italic;
@@ -79,7 +80,7 @@ body {
 }
 
 .experienceItemDescriptionList {
-    padding: 0rem 0.9375rem 0.9375rem;
+    padding: 0rem 0.9375rem;
 }
 
 .experienceItemDescriptionListItem {
