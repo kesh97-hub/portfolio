@@ -25,7 +25,7 @@ export type Award = {
 export const experiences: Experience[] = [
     {
         id: 1,
-        // companyLogo: <SiOracle color="#F80000" className="companyLogo"/>,
+        companyLogo: <SiOracle color="#F80000" className="companyLogo"/>,
         companyName: "Oracle",
         position: "Application Developer",
         location: "Bengaluru, India",
@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     },
     {
         id: 2,
-        // companyLogo: <SiOracle color="#F80000" className="companyLogo"/>,
+        companyLogo: <SiOracle color="#F80000" className="companyLogo"/>,
         companyName: "Oracle",
         location: "Bengaluru, India",
         position: "Senior Application Developer",
@@ -71,7 +71,7 @@ export const experiences: Experience[] = [
     },
     {
         id: 3,
-        // companyLogo: <SiOracle color="#F80000" className="companyLogo"/>,
+        companyLogo: <img src='portfolio/UB_Logo.png' alt='UB' style={{ width: "3rem", height: "auto" }}></img>,
         companyName: "University at Buffalo, SUNY",
         location: "Buffalo, NY",
         position: "Grader",
