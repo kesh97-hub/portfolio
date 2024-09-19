@@ -1,99 +1,89 @@
 body {
-    background-color: black;
     font-size: 16px;
-    overflow-x: hidden;
 }
 
 .aboutMeContainer {
-    height: 100vh;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    height: auto;
+    margin: 10rem 10rem;
+    gap: 5rem;
+    font-family: "League Spartan", sans-serif;
+}
+
+.aboutMeHeader {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.aboutMeHeaderText {
+    color: gray;
+    transform: rotate(-90deg);
+    text-align: center;
+    transform-origin: center;
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.aboutMeHeaderText:hover {
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.aboutMeBody {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    overflow: hidden;
+    /* margin-right: 10rem; */
+    /* gap: 4rem; */
+}
+
+.aboutMeCard {
+    padding: 1rem 1.5rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.statCards {
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 0 2rem;
-    box-sizing: border-box;
-}
-
-.introContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: larger;
-    font-family: "League Spartan", sans-serif;
-    box-sizing: border-box;
-}
-
-.profileBadgeContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-.smLinkContainer {
-    /* background-color: rgb(98, 94, 94); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-.personalLinks {
-    font-size: 2rem;
-    opacity: 0.8;
-    transition: transform 0.2 ease-in-out;
-}
-.personalLinks:hover {
-    transform: scale(1.2);
-    opacity: 1;
-}
-
-.locationContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: 1.25rem; */
-}
-
-.locationIcon {
-    padding-bottom: 0.4rem;
-    font-size: 1.5rem;
-    color: #1E90FF;
-}
-
-.locationText {
-    margin: 0;
-    color: white;
-    font-size: larger;
-    font-weight: 300;
-    font-family: "League Spartan", sans-serif;
 }
 
 @media (max-width: 900px) {
     .aboutMeContainer {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content:center;
-        gap: 1.25rem;
-        margin: 0 1rem;
-    }
-
-    .introContainer {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0 1rem;
-        font-size: smaller;
-    }
-    
-    .personalLinks {
-        opacity: 1;
+        margin: 10rem 2rem;
+        height: auto;
+        gap: 2rem;
     }
 
-    .personalLinks:hover{
+    .aboutMeHeader {
+        flex-direction: row;
+    }
+
+    .aboutMeHeaderText {
         transform: none;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .aboutMeHeaderText:hover {
+        transform: none
+    }
+
+    .aboutMeBody {
+        display: block;
+        overflow: hidden;
+        /* margin: 0 1rem 2rem 1rem; */
     }
 }

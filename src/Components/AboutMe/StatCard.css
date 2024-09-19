@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+.statsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 20rem;
+}
+
+.statsHeader {
+    padding: 0.625rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.statsBody {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.625rem 0.625rem;
+}

@@ -1,125 +1,92 @@
-import React, { useEffect, useRef } from "react";
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { SiLeetcode, SiDropbox } from 'react-icons/si';
-import { MdAlternateEmail, MdLocationPin } from "react-icons/md";
-import { motion, useInView, useAnimation } from "framer-motion";
-
-import './AboutMe.css'
-
-import Badge from "../Badge/Badge";
+import { motion, useScroll, useTransform } from "framer-motion";
+import "./AboutMe.css"
+import { useEffect, useRef, useState } from "react";
+import { Card } from "@mui/material";
+import StatCard from "./StatCard";
+import { getStats, stat } from "./StatData";
 
 function AboutMe() {
     const ref = useRef(null);
-    const isInView = useInView(ref);
 
-    const mainControls = useAnimation();
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "1 1"]
+    })
+
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [2, 1])
+    const opacityProgress = useTransform(scrollYProgress, [0.2, 1], [0, 1])
+    
+    const [stats, setStats] = useState<stat[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        if(isInView) {
-            mainControls.start("visible")
+        // Define an async function inside useEffect
+        const fetchData = async () => {
+        try {
+            const data = await getStats();
+            setStats(data || []); // Ensure default value in case of undefined
+        } catch (error: any) {
+            console.error('Error fetching data:', error);
+            setError('Failed to load data');
+        } finally {
+            setLoading(false);
         }
-    }, [isInView, mainControls]);
+        };
+
+        // Call the async function
+        fetchData();
+    }, []);
 
     return (
+        
         <div className="aboutMeContainer">
-            <div className="introContainer" ref={ref}>
-                <motion.h1
-                    variants={{
-                        hidden: {opacity: 0, x: -75},
-                        visible: {opacity: 1, x: 0},
-                    }}
-                    initial = "hidden"
-                    animate = {mainControls}
-                    transition= {{
-                        duration: 0.5,
-                        delay: 0.2
-                    }}
-                >
-                    Hello, I'm Keshav Kumar.
-                </motion.h1>
-                <motion.p
-                    variants={{
-                        hidden: {opacity: 0, x: -75},
-                        visible: {opacity: 1, x: 0},
-                    }}
-                    initial="hidden"
-                    animate={mainControls}
-                    transition={{
-                        duration: 0.5,
-                        delay: 0.4
-                    }}
-                >
-                    A passionate software developer interested in developing data-intensive products and AI.
-                </motion.p>
-            </div>
             <motion.div 
-                className="profileBadgeContainer"
-                variants={{
-                    hidden: {opacity: 0, y: -200},
-                    visible: {opacity: 1, y: 0},
+                ref={ref}
+                style={{
+                    scale: scaleProgress,
+                    opacity: opacityProgress
                 }}
-                initial="hidden"
-                animate={mainControls}
-                transition={{
-                    duration: 0.8,
-                    delay: 0.2,
-                }}
+                className="aboutMeHeader"
             >
-                <Badge imageSrc={`${process.env.PUBLIC_URL}/BadgePic.jpg`} nameAbbreviation={"KK"}/>
-                <div className="smLinkContainer">
-                    <a
-                        className="personalLinks"
-                        href="mailto:keshavk1808@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: '#D44638'}}
-                    >
-                        <MdAlternateEmail/>
-                    </a>
-                    <a 
-                        className="personalLinks"
-                        href="https://www.linkedin.com/in/keshkuma"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: '#0077B5'}}
-                    >
-                            <FaLinkedin/>
-                    </a>
+                <h1 className="aboutMeHeaderText">A</h1>
+                <h1 className="aboutMeHeaderText">B</h1>
+                <h1 className="aboutMeHeaderText">O</h1>
+                <h1 className="aboutMeHeaderText">U</h1>
+                <h1 className="aboutMeHeaderText">T</h1>
+                <h1 className="aboutMeHeaderText">&nbsp;</h1>
+                <h1 className="aboutMeHeaderText">M</h1>
+                <h1 className="aboutMeHeaderText">E</h1>
+            </motion.div>
+            <motion.div className="aboutMeBody">
+                <Card
+                    sx={{
+                        borderRadius: 4,
+                        border: '1px solid',
+                        borderColor: '#222222',
+                        bgcolor: '#101010',
+                        color: '#FFFFFF'
+                    }}
+                    className="aboutMeCard"
+                >
+                    <p>With 4 years of experience in software development, I’ve honed my skills in front-end, back-end, System Design and AI. Over the years, I’ve worked on a mix of projects, from full stack development to creating complex archival systems, which has given me a solid grip on both coding and design.</p>
 
-                    <a 
-                        className="personalLinks"
-                        href="https://www.github.com/kesh97-hub"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: '#ffff'}}
-                    >
-                            <FaGithub/>
-                    </a>
+                    <p>Currently, I’m expanding my knowledge and expertise through my MS studies, focusing on Artificial Intelligence and Natural language processing. This academic journey is enriching my understanding of machine learning and data processing and enhancing my ability to tackle complex technical challenges.</p>
 
-                    <a 
-                        className="personalLinks"
-                        href="https://www.leetcode.com/u/kesh97/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: '#FFA116'}}
-                    >
-                            <SiLeetcode/>
-                    </a>
+                    <p>I’m super passionate about building data-driven products that use AI and love exploring new tech and innovative solutions. When I’m not coding or studying, you’ll probably find me out for a run or catching up on anime.</p>
 
-                    <a 
-                        className="personalLinks"
-                        href="https://www.dropbox.com/scl/fi/8dcr4vbqnz2r3uxyi02px/Keshav_Resume.pdf?rlkey=oqzeog9my72vu0je4bloqjcnq&st=hv1i4s8n&dl=0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: '#0061FF' }}
-                    >
-                            <SiDropbox/>
-                    </a>
-                </div>
-                <div className="locationContainer">
-                    <MdLocationPin className="locationIcon"/>
-                    <p className="locationText">Buffalo, NY</p>
-                </div>
+                    <p>Feel free to explore my portfolio to see my work and get in touch if you’d like to discuss opportunities or collaborate on exciting projects!</p>
+
+                    <div className="statCards">
+                        {
+                            stats.map((stat, index) => (
+                                <StatCard key={index} stat={stat}/>
+                            ))
+                        }
+                    </div>
+                </Card>
+                
+                
             </motion.div>
         </div>
     )
