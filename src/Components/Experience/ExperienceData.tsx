@@ -71,7 +71,7 @@ export const experiences: Experience[] = [
     },
     {
         id: 3,
-        companyLogo: <img src={`${process.env.PUBLIC_URL}/UB_Logo.png`} alt='UB' style={{ width: "3rem", height: "auto" }}></img>,
+        companyLogo: <img src='portfolio/UB_Logo.png' alt='UB' style={{ width: "3rem", height: "auto" }}></img>,
         companyName: "University at Buffalo, SUNY",
         location: "Buffalo, NY",
         position: "Grader",

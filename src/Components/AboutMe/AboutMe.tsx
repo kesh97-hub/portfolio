@@ -3,7 +3,7 @@ import "./AboutMe.css"
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@mui/material";
 import StatCard from "./StatCard";
-import { getStats, stat } from "./StatData";
+import { getStats, stat, stats } from "./StatData";
 
 function AboutMe() {
     const ref = useRef(null);
@@ -16,27 +16,27 @@ function AboutMe() {
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [2, 1])
     const opacityProgress = useTransform(scrollYProgress, [0.2, 1], [0, 1])
     
-    const [stats, setStats] = useState<stat[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    // const [stats, setStats] = useState<stat[]>([]);
+    // const [loading, setLoading] = useState<boolean>(true);
+    // const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        // Define an async function inside useEffect
-        const fetchData = async () => {
-        try {
-            const data = await getStats();
-            setStats(data || []); // Ensure default value in case of undefined
-        } catch (error: any) {
-            console.error('Error fetching data:', error);
-            setError('Failed to load data');
-        } finally {
-            setLoading(false);
-        }
-        };
+    // useEffect(() => {
+    //     // Define an async function inside useEffect
+    //     const fetchData = async () => {
+    //     try {
+    //         const data = await getStats();
+    //         setStats(data || []); // Ensure default value in case of undefined
+    //     } catch (error: any) {
+    //         console.error('Error fetching data:', error);
+    //         setError('Failed to load data');
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    //     };
 
-        // Call the async function
-        fetchData();
-    }, []);
+    //     // Call the async function
+    //     fetchData();
+    // }, []);
 
     return (
         

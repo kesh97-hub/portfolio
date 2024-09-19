@@ -6,10 +6,6 @@ export async function fetchLeetcodeData(username: string): Promise<any> {
       const response = await axios.post('https://leetcode.com/graphql', {
         getUserContestRankingQuery,
         variables: { username }
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
-        }
       });
       
       return response.data;
